@@ -73,7 +73,7 @@ Using Html.Partial without caching	Use OutputCache or ResponseCache
 📌 How to Run the Project
 1️⃣ Clone the Repository
 
-git clone https://github.com/your-username/benchmark-partial.git
+git clone https://github.com/InspectorAB/benchmark-partial.git
 cd benchmark-partial
 
 2️⃣ Open in Visual Studio
