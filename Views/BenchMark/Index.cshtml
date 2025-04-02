@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "Partial View Benchmark";
+    var model = new BenchMarkPartial4._8._1.Models.ProductModel { ProductId = 1, Name = "Test Product" };
+}
+
+<h2>Partial View Performance Tests</h2>
+
+<!-- Buttons to trigger benchmarking -->
+<button id="testHtmlPartial">Test Html.Partial</button>
+<button id="testHtmlRenderPartial">Test Html.RenderPartial</button>
+
+<!-- UI to display execution times -->
+<h3>Execution Times:</h3>
+<p id="htmlPartialTime">Html.Partial: Not Tested</p>
+<p id="htmlRenderPartialTime">Html.RenderPartial: Not Tested</p>
+
+<h3>Loading Partial Views</h3>
+
+<!-- Benchmark Partial Views Directly in Razor -->
+@{
+    var stopwatch1 = System.Diagnostics.Stopwatch.StartNew();
+
+    for (int i = 0; i < 1000; i++)
+    {
+        @Html.Partial("_ProductCard", new BenchMarkPartial4._8._1.Models.ProductModel { Name = "Sample Product", ProductId = 123 })
+    }
+
+    stopwatch1.Stop();
+}
+
+<p>Html.Partial Execution Time (Server-Side): <b>@stopwatch1.ElapsedMilliseconds ms</b></p>
+
+@{
+    var stopwatch2 = System.Diagnostics.Stopwatch.StartNew();
+
+    for (int i = 0; i < 1000; i++)
+    {
+        Html.RenderPartial("_ProductCard", model);
+    }
+
+    stopwatch2.Stop();
+}
+
+<p>Html.RenderPartial Execution Time (Server-Side): <b>@stopwatch2.ElapsedMilliseconds ms</b></p>
+
+<!-- Container for JavaScript-rendered partials -->
+<div id="partialContainer"></div>
+
+<script>document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("testHtmlPartial").addEventListener("click", function () {
+            let start = performance.now();
+            let container = document.getElementById("partialContainer");
+            container.innerHTML = ""; // Clear old results
+
+            let template = `
+                <div class="product-card">
+                    <h3>Test Product</h3>
+                    <p>Product ID: 1</p>
+                </div>
+            `;
+
+            for (let i = 0; i < 1000; i++) {
+                container.innerHTML += template;
+            }
+
+            let end = performance.now();
+            document.getElementById("htmlPartialTime").innerText = "Html.Partial Execution Time (Client-Side): " + (end - start).toFixed(2) + " ms";
+        });
+
+        document.getElementById("testHtmlRenderPartial").addEventListener("click", function () {
+            let start = performance.now();
+            let container = document.getElementById("partialContainer");
+            container.innerHTML = ""; // Clear old results
+
+            let template = document.createElement("div");
+            template.classList.add("product-card");
+            template.innerHTML = `<h3>Test Product</h3><p>Product ID: 1</p>`;
+
+            for (let i = 0; i < 1000; i++) {
+                let newElement = template.cloneNode(true);
+                container.appendChild(newElement);
+            }
+
+            let end = performance.now();
+            document.getElementById("htmlRenderPartialTime").innerText = "Html.RenderPartial Execution Time (Client-Side): " + (end - start).toFixed(2) + " ms";
+        });
+    });</script>

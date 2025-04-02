@@ -1,0 +1,103 @@
+﻿@{
+    ViewBag.Title = "Favicon Loading Benchmark";
+}
+@using System.Diagnostics
+<h2>Favicon Loading Performance Tests</h2>
+
+<!-- Buttons to trigger benchmarking -->
+<button id="testHtmlPartial">Test Html.Partial</button>
+<button id="testDirectImg">Test Direct <img></button>
+<button id="testCDNImg">Test CDN Image</button>
+
+<!-- UI to display execution times -->
+<h3>Execution Times:</h3>
+<p id="htmlPartialTime">Html.Partial: Not Tested</p>
+<p id="directImgTime">Direct <img>: Not Tested</p>
+<p id="cdnImgTime">CDN Image: Not Tested</p>
+
+<h3>Loading Favicon</h3>
+
+<!-- Benchmark Partial Views Directly in Razor -->
+@{
+    var stopwatch1 = Stopwatch.StartNew();
+
+    for (int i = 0; i < 1000; i++)
+    {
+        @Html.Partial("_FaviconPartial")
+    }
+
+    stopwatch1.Stop();
+}
+
+<p>Html.Partial Execution Time (Server-Side): <b>@stopwatch1.ElapsedMilliseconds ms</b></p>
+
+@{
+    var stopwatch2 = Stopwatch.StartNew();
+
+    for (int i = 0; i < 1000; i++)
+    {
+        <img src="~/favicon.ico" alt="Favicon" width="32" height="32">
+    }
+
+    stopwatch2.Stop();
+}
+
+<p>Direct `<img>` Execution Time (Server-Side): <b>@stopwatch2.ElapsedMilliseconds ms</b></p>
+
+<!-- Container for JavaScript-generated images -->
+<div id="faviconContainer"></div>
+
+<script>document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("testHtmlPartial").addEventListener("click", function () {
+            let start = performance.now();
+            let container = document.getElementById("faviconContainer");
+            container.innerHTML = ""; // Clear previous tests
+
+            let template = `<img src="favicon.ico" alt="Favicon" width="32" height="32">`;
+
+            for (let i = 0; i < 1000; i++) {
+                container.innerHTML += template;
+            }
+
+            let end = performance.now();
+            document.getElementById("htmlPartialTime").innerText = "Html.Partial Execution Time (Client-Side): " + (end - start).toFixed(2) + " ms";
+        });
+
+        document.getElementById("testDirectImg").addEventListener("click", function () {
+            let start = performance.now();
+            let container = document.getElementById("faviconContainer");
+            container.innerHTML = ""; // Clear previous tests
+
+            for (let i = 0; i < 1000; i++) {
+                let img = document.createElement("img");
+                img.src = "favicon.ico";
+                img.alt = "Favicon";
+                img.width = 32;
+                img.height = 32;
+                container.appendChild(img);
+            }
+
+            let end = performance.now();
+            document.getElementById("directImgTime").innerText = "Direct <img> Execution Time (Client-Side): " + (end - start).toFixed(2) + " ms";
+        });
+
+        document.getElementById("testCDNImg").addEventListener("click", function () {
+            let start = performance.now();
+            let container = document.getElementById("faviconContainer");
+            container.innerHTML = ""; // Clear previous tests
+
+            let cdnUrl = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/star.svg";
+
+            for (let i = 0; i < 1000; i++) {
+                let img = document.createElement("img");
+                img.src = cdnUrl;
+                img.alt = "Favicon";
+                img.width = 32;
+                img.height = 32;
+                container.appendChild(img);
+            }
+
+            let end = performance.now();
+            document.getElementById("cdnImgTime").innerText = "CDN Image Execution Time (Client-Side): " + (end - start).toFixed(2) + " ms";
+        });
+    });</script>
