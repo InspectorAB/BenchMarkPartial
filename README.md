@@ -44,7 +44,8 @@ It compares:
 - A **full-page reload** triggers high CPU usage on the server — simulating multiple concurrent user hits.
 
 > 📷 See CPU spike screenshot on page refresh:  
-> ![CPU Usage Spike](./image.png)
+![image](https://github.com/user-attachments/assets/6c61822f-b2bc-4fa6-8652-e3990bc6d875)
+
 
 ✅ Key Takeaways:
 
