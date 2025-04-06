@@ -51,9 +51,9 @@
 
 
     @*for (int i = 0; i < 1000; i++)
-    {
-        @Html.Partial("_ProductCard", model)
-    }*@
+        {
+            @Html.Partial("_ProductCard", model)
+        }*@
     var products = new List<BenchMarkPartial4._8._1.Models.ProductModel>();
     for (int i = 0; i < 1000; i++)
     {
@@ -67,11 +67,30 @@
     stopwatch3.Stop();
 }
 
+@{
+    var stopwatch4 = System.Diagnostics.Stopwatch.StartNew();
+
+    var products1 = new List<BenchMarkPartial4._8._1.Models.ProductModel>();
+    for (int i = 0; i < 1000; i++)
+    {
+        products1.Add(new BenchMarkPartial4._8._1.Models.ProductModel { ProductId = i + 1, Name = "Product " + (i + 1) });
+    }
+
+    foreach (var product in products1)
+    {
+        Html.RenderPartial("_ProductCard", product);
+    }
+
+    stopwatch4.Stop();
+}
+
+<p><strong>Html.RenderPartial (1000 loops of unique product):</strong> @stopwatch4.ElapsedMilliseconds ms</p>
 <p><strong>Html.Partial (1000 loops of same product):</strong> @stopwatch3.ElapsedMilliseconds ms</p>
 <!-- Container for JavaScript-rendered partials -->
 <div id="partialContainer"></div>
 
-<script>document.addEventListener("DOMContentLoaded", function () {
+<script>
+document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("testHtmlPartial").addEventListener("click", function () {
             let start = performance.now();
             let container = document.getElementById("partialContainer");
