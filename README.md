@@ -45,24 +45,7 @@ Instead of calling multiple instances of the same partial, load once and clone u
     @Html.Partial("_ProductCard", new { Name = "Sample Product", ProductId = i })
 }
 
-✅ Optimized Approach (Load Once, Clone in JS)
 
-@Html.Partial("_ProductCard") <!-- Load once -->
-<div id="productContainer"></div>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let template = document.querySelector(".product-card").cloneNode(true);
-        document.querySelector(".product-card").remove();
-        let container = document.getElementById("productContainer");
-
-        for (let i = 0; i < 10; i++) {
-            let newElement = template.cloneNode(true);
-            newElement.querySelector(".title").textContent = "Product " + (i+1);
-            container.appendChild(newElement);
-        }
-    });
-</script>
 
 ✅ Improves performance by avoiding redundant partial rendering.
 ⚡ Best Practices
