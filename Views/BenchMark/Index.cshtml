@@ -1,20 +1,23 @@
 ﻿@{
     ViewBag.Title = "Partial View Benchmark";
     var model = new BenchMarkPartial4._8._1.Models.ProductModel { ProductId = 1, Name = "Test Product" };
+
+
 }
 
 <h2>Partial View Performance Tests</h2>
 
 <!-- Buttons to trigger benchmarking -->
-<button id="testHtmlPartial">Test Html.Partial</button>
-<button id="testHtmlRenderPartial">Test Html.RenderPartial</button>
+<button id="testHtmlPartial">Test Html.Partial (JS)</button>
+<button id="testHtmlRenderPartial">Test Html.RenderPartial (JS)</button>
 
-<!-- UI to display execution times -->
-<h3>Execution Times:</h3>
-<p id="htmlPartialTime">Html.Partial: Not Tested</p>
-<p id="htmlRenderPartialTime">Html.RenderPartial: Not Tested</p>
+
+<h3>Execution Times</h3>
+<p id="htmlPartialTime">Html.Partial (JS): Not Tested</p>
+<p id="htmlRenderPartialTime">Html.RenderPartial (JS): Not Tested</p>
 
 <h3>Loading Partial Views</h3>
+
 
 <!-- Benchmark Partial Views Directly in Razor -->
 @{
@@ -43,6 +46,28 @@
 
 <p>Html.RenderPartial Execution Time (Server-Side): <b>@stopwatch2.ElapsedMilliseconds ms</b></p>
 
+@{
+    var stopwatch3 = System.Diagnostics.Stopwatch.StartNew();
+
+
+    @*for (int i = 0; i < 1000; i++)
+    {
+        @Html.Partial("_ProductCard", model)
+    }*@
+    var products = new List<BenchMarkPartial4._8._1.Models.ProductModel>();
+    for (int i = 0; i < 1000; i++)
+    {
+        products.Add(new BenchMarkPartial4._8._1.Models.ProductModel { ProductId = i + 1, Name = "Product " + (i + 1) });
+    }
+
+    foreach (var product in products)
+    {
+        @Html.Partial("_ProductCard", product)
+    }
+    stopwatch3.Stop();
+}
+
+<p><strong>Html.Partial (1000 loops of same product):</strong> @stopwatch3.ElapsedMilliseconds ms</p>
 <!-- Container for JavaScript-rendered partials -->
 <div id="partialContainer"></div>
 

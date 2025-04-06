@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "D:\\BenchMarkPartial\\BenchMarkPartial4.8.1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0547DD98-359B-4C70-B083-8C67CF9A5010}|BenchMarkPartial4.8.1.csproj|d:\\benchmarkpartial\\benchmarkpartial4.8.1\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{0547DD98-359B-4C70-B083-8C67CF9A5010}|BenchMarkPartial4.8.1.csproj|D:\\BenchMarkPartial\\BenchMarkPartial4.8.1\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{0547DD98-359B-4C70-B083-8C67CF9A5010}|BenchMarkPartial4.8.1.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
@@ -11,24 +11,24 @@
       "RelativeMoniker": "D:0:0:{0547DD98-359B-4C70-B083-8C67CF9A5010}|BenchMarkPartial4.8.1.csproj|solutionrelative:views\\benchmark\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0547DD98-359B-4C70-B083-8C67CF9A5010}|BenchMarkPartial4.8.1.csproj|d:\\benchmarkpartial\\benchmarkpartial4.8.1\\views\\benchmark\\_productcard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{0547DD98-359B-4C70-B083-8C67CF9A5010}|BenchMarkPartial4.8.1.csproj|D:\\BenchMarkPartial\\BenchMarkPartial4.8.1\\views\\benchmark\\_faviconpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0547DD98-359B-4C70-B083-8C67CF9A5010}|BenchMarkPartial4.8.1.csproj|solutionrelative:views\\benchmark\\_faviconpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0547DD98-359B-4C70-B083-8C67CF9A5010}|BenchMarkPartial4.8.1.csproj|D:\\BenchMarkPartial\\BenchMarkPartial4.8.1\\views\\benchmark\\_productcard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{0547DD98-359B-4C70-B083-8C67CF9A5010}|BenchMarkPartial4.8.1.csproj|solutionrelative:views\\benchmark\\_productcard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0547DD98-359B-4C70-B083-8C67CF9A5010}|BenchMarkPartial4.8.1.csproj|d:\\benchmarkpartial\\benchmarkpartial4.8.1\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0547DD98-359B-4C70-B083-8C67CF9A5010}|BenchMarkPartial4.8.1.csproj|D:\\BenchMarkPartial\\BenchMarkPartial4.8.1\\models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0547DD98-359B-4C70-B083-8C67CF9A5010}|BenchMarkPartial4.8.1.csproj|solutionrelative:models\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0547DD98-359B-4C70-B083-8C67CF9A5010}|BenchMarkPartial4.8.1.csproj|d:\\benchmarkpartial\\benchmarkpartial4.8.1\\controllers\\benchmarkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0547DD98-359B-4C70-B083-8C67CF9A5010}|BenchMarkPartial4.8.1.csproj|D:\\BenchMarkPartial\\BenchMarkPartial4.8.1\\controllers\\benchmarkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0547DD98-359B-4C70-B083-8C67CF9A5010}|BenchMarkPartial4.8.1.csproj|solutionrelative:controllers\\benchmarkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0547DD98-359B-4C70-B083-8C67CF9A5010}|BenchMarkPartial4.8.1.csproj|d:\\benchmarkpartial\\benchmarkpartial4.8.1\\views\\benchmark\\faviconbenchmark.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{0547DD98-359B-4C70-B083-8C67CF9A5010}|BenchMarkPartial4.8.1.csproj|D:\\BenchMarkPartial\\BenchMarkPartial4.8.1\\views\\benchmark\\faviconbenchmark.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{0547DD98-359B-4C70-B083-8C67CF9A5010}|BenchMarkPartial4.8.1.csproj|solutionrelative:views\\benchmark\\faviconbenchmark.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0547DD98-359B-4C70-B083-8C67CF9A5010}|BenchMarkPartial4.8.1.csproj|d:\\benchmarkpartial\\benchmarkpartial4.8.1\\views\\benchmark\\_faviconpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0547DD98-359B-4C70-B083-8C67CF9A5010}|BenchMarkPartial4.8.1.csproj|solutionrelative:views\\benchmark\\_faviconpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +42,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ProductModel.cs",
               "DocumentMoniker": "D:\\BenchMarkPartial\\BenchMarkPartial4.8.1\\Models\\ProductModel.cs",
               "RelativeDocumentMoniker": "Models\\ProductModel.cs",
@@ -50,12 +50,11 @@
               "RelativeToolTip": "Models\\ProductModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T07:24:26.899Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T07:24:26.899Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "FaviconBenchmark.cshtml",
               "DocumentMoniker": "D:\\BenchMarkPartial\\BenchMarkPartial4.8.1\\Views\\BenchMark\\FaviconBenchmark.cshtml",
               "RelativeDocumentMoniker": "Views\\BenchMark\\FaviconBenchmark.cshtml",
@@ -63,12 +62,11 @@
               "RelativeToolTip": "Views\\BenchMark\\FaviconBenchmark.cshtml",
               "ViewState": "AgIAAE4AAAAAAAAAAAAAAGQAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-02T07:12:56.05Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T07:12:56.05Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "_FaviconPartial.cshtml",
               "DocumentMoniker": "D:\\BenchMarkPartial\\BenchMarkPartial4.8.1\\Views\\BenchMark\\_FaviconPartial.cshtml",
               "RelativeDocumentMoniker": "Views\\BenchMark\\_FaviconPartial.cshtml",
@@ -87,14 +85,14 @@
               "RelativeDocumentMoniker": "Views\\BenchMark\\Index.cshtml",
               "ToolTip": "D:\\BenchMarkPartial\\BenchMarkPartial4.8.1\\Views\\BenchMark\\Index.cshtml",
               "RelativeToolTip": "Views\\BenchMark\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-02T07:05:08.687Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "_ProductCard.cshtml",
               "DocumentMoniker": "D:\\BenchMarkPartial\\BenchMarkPartial4.8.1\\Views\\BenchMark\\_ProductCard.cshtml",
               "RelativeDocumentMoniker": "Views\\BenchMark\\_ProductCard.cshtml",
@@ -120,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "BenchMarkController.cs",
               "DocumentMoniker": "D:\\BenchMarkPartial\\BenchMarkPartial4.8.1\\Controllers\\BenchMarkController.cs",
               "RelativeDocumentMoniker": "Controllers\\BenchMarkController.cs",
@@ -128,8 +126,7 @@
               "RelativeToolTip": "Controllers\\BenchMarkController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T07:01:58.314Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T07:01:58.314Z"
             }
           ]
         }
