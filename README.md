@@ -11,11 +11,41 @@ It compares:
 
     JavaScript-based reuse vs multiple partial calls
 
-📊 Benchmark Results
-Rendering Method	Execution Time (ms)
-Html.Partial (1000 iterations)	~1745.20 ms
-Direct <img> tag	~6.40 ms
-CDN Image	~5.30 ms
+---
+
+## 📌 Test Setup
+
+- ASP.NET MVC 4.8 Web Application
+- Rendering 1000 `_ProductCard` partials using different techniques
+- Stopwatch used for timing execution on server and client
+- Tested on Intel i5 9th Gen CPU, 16GB DDR4 RAM
+
+---
+
+## ⚙️ Benchmark Scenarios
+
+| Rendering Method                      | Execution Time | Context       |
+|--------------------------------------|----------------|---------------|
+| Html.Partial (Server-Side)           | ~25 ms         | Server        |
+| Html.Partial (Client-Side via JS)    | 2882.90 ms     | Client        |
+| Html.RenderPartial (Client-Side via JS) | 4.00 ms     | Client        |
+| Cached Partial View                  | 200 ms         | Server        |
+| JavaScript Cloning (One DOM Reused)  | 50 ms          | Client        |
+| Direct `<img>` Tag                   | ~6 ms          | Client        |
+| CDN Image Tag                        | ~5 ms          | Client        |
+
+---
+## 📊 Key Observations
+
+- Server-side rendering (`Html.Partial`) is extremely fast (~25 ms) when hardware is strong.
+- JavaScript-based loading of `Html.Partial` introduces **significant delay (~2882 ms)**.
+- `Html.RenderPartial` performs much faster on the client (~4 ms) when reused wisely.
+- Direct image tags and CDN-hosted assets are significantly faster than partial-based image rendering.
+- A **full-page reload** triggers high CPU usage on the server — simulating multiple concurrent user hits.
+
+> 📷 See CPU spike screenshot on page refresh:  
+![image](https://github.com/user-attachments/assets/6c61822f-b2bc-4fa6-8652-e3990bc6d875)
+
 
 ✅ Key Takeaways:
 
